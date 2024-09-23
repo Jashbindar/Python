@@ -14,7 +14,7 @@ def divide(num1, num2):
 
 # Multiplication function
 def multiply(num1, num2):
-    return num1 + num2
+    return num1 * num2
 
 def calculator():
     # will keep looping until operation "5."" is placed
