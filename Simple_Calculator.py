@@ -2,19 +2,20 @@ print("Welcome to calculator")
 
 # Addition function
 def add(num1, num2):
-    return num1 + num2
+    return "{:.3f}".format(num1 + num2)
 
 # Subtraction function
 def subtract(num1, num2):
-    return num1 - num2
+    return "{:.3f}".format(num1 - num2)
 
 # Division function
 def divide(num1, num2):
-    return num1 / num2
+    return "{:.3f}".format(num1 / num2)
 
 # Multiplication function
 def multiply(num1, num2):
-    return num1 * num2
+    return "{:.3f}".format(num1 * num2)
+
 
 def calculator():
     # will keep looping until operation "5."" is placed
@@ -29,7 +30,7 @@ def calculator():
 
             # will stop executing the program
             if (choice == 5):
-                print("Exiting program")
+                print("Exiting program...")
                 exit()
 
             # global is used so the parameters can be used in the other function
@@ -39,10 +40,8 @@ def calculator():
 
             if (choice == 1):
                 print("Answer:", add(num1, num2))
-                print()
             elif (choice == 2):
                 print("Answer:", subtract(num1, num2))
-                print()
             elif (choice == 3):
                 while (num2 == 0):
                     # error if num2 = 0
@@ -50,10 +49,8 @@ def calculator():
                     # ask the user to input the right value
                     num2 = eval(input("Number 2: "))
                 print("Answer:", divide(num1, num2))
-                print()
             else:
                 print("Answer:", multiply(num1, num2))
-                print()
 
         except ValueError:
             print("\nPlease enter a numerical character")
